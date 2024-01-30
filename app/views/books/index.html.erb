@@ -11,12 +11,18 @@
   <table class="listing" summary="book list" style="width: 100%;">
     <tr class="header">
       <td><h3>Title</h3></td>
+      <td><h3>Author</h3></td>
+      <td><h3>Price</h3></td>
+      <td><h3>Published</h3></td>
       
       <td><h3>Actions</h3></td>
     </tr>
     <% @books.each do |book| %>
     <tr>
       <td><%= book.title %></td>
+      <td><%= book.author %></td>
+      <td><%= book.price %></td>
+      <td><%= book.published_date %></td>
       <td class="actions">
         <%= link_to("Show", book_path(book), class: 'action show') %>
         <%= link_to("Edit", edit_book_path(book), class: 'action edit') %>
